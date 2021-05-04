@@ -1,0 +1,30 @@
+grammar org.xtext.example.mydsl.AcceptanceTest with org.eclipse.xtext.common.Terminals
+
+generate acceptanceTest "http://www.xtext.org/example/mydsl/AcceptanceTest"
+
+AcceptanceTest:
+	tests+=TestCase*;
+	
+Item:
+	'item' id=INT 'x' quantity=INT
+;
+
+Action:
+	action=('send' | 'order' | 'query')
+;
+	
+Case:
+	'given' (items+=Item)*
+;
+	
+Condition:
+	'when' action=Action 'is' value=('true' | 'false')
+;
+
+Outcome:
+	'then' (items+=Item*)? 'is' result=('true' | 'false')
+;
+
+TestCase:
+	'case:' given=[Case] when=[Condition] then=[Outcome]
+;
