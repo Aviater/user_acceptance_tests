@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT SystemMessage (Given,When,Then)>
+<!ELEMENT Given (ItemsToSend)>
+<!ELEMENT ItemsToSend (Item+)>
+<!ELEMENT Item (Id, Quantity)>
+<!ELEMENT When (Message)>
+<!ATTLIST Message sent (true|false) #REQUIRED>
+<!ELEMENT Then (Reply)>
+<!ATTLIST Reply received (true|false) #REQUIRED>
+
+<!ELEMENT Id (#PCDATA)>
+<!ELEMENT Quantity (#PCDATA)>
+<!ELEMENT Message (#PCDATA)>
+<!ELEMENT Reply (#PCDATA)>

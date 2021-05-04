@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SystemQueryStock SYSTEM "system_query_stock.dtd">
+<SystemQueryStock>
+	<Given>
+		<ItemToQuery>
+			<Id>20A</Id>
+		</ItemToQuery>
+	</Given>
+	<When>
+		<Message sent="true"></Message>
+	</When>
+	<Then>
+		<Reply>
+			<QueriedItem>
+				<Id>20A</Id>
+				<Stock>42</Stock>
+			</QueriedItem>
+		</Reply>
+	</Then>
+</SystemQueryStock>

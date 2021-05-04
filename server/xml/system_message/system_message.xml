@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SystemMessage SYSTEM "system_message.dtd">
+<SystemMessage>
+	<Given>
+		<ItemsToSend>
+			<Item>
+				<Id>20A</Id>
+				<Quantity>2</Quantity>
+			</Item>
+			<Item>
+				<Id>22C</Id>
+				<Quantity>1</Quantity>
+			</Item>
+		</ItemsToSend>
+	</Given>
+	<When>
+		<Message sent="true"></Message>
+	</When>
+	<Then>
+		<Reply received="true"></Reply>
+	</Then>
+</SystemMessage>

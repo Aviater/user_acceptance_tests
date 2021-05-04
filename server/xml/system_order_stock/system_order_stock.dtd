@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT SystemOrderStock (Given,When,Then)>
+<!ELEMENT Given (ItemsToOrder)>
+<!ELEMENT ItemsToOrder (Item+)>
+<!ELEMENT Item (Id, Quantity)>
+<!ELEMENT When (Order)>
+<!ATTLIST Order sent (true|false) #REQUIRED>
+<!ELEMENT Then (Reply)>
+<!ATTLIST Reply received (true|false) #REQUIRED>
+
+<!ELEMENT Id (#PCDATA)>
+<!ELEMENT Quantity (#PCDATA)>
+<!ELEMENT Order (#PCDATA)>
+<!ELEMENT Reply (#PCDATA)>
